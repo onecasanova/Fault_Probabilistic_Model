@@ -1,0 +1,143 @@
+AUV Propulsion System
+├── 1. Power Supply Subsystem
+│   ├── 1.1 Battery
+│   ├── 1.2 Power Supply Module
+│   ├── 1.3 Power Distribution / Power Conversion Module
+│   ├── 1.4 Power Cables
+│   └── 1.5 Electrical Connectors
+│
+├── 2. Control and Drive Subsystem
+│   ├── 2.1 Actuator Controller / Motor Controller
+│   ├── 2.2 ESC / Motor Driver
+│   ├── 2.3 Feedback Sensors
+│   │   ├── 2.3.1 Current Sensor
+│   │   ├── 2.3.2 Speed Sensor
+│   │   ├── 2.3.3 Voltage Sensor
+│   │   └── 2.3.4 Temperature Sensor
+│   ├── 2.4 Signal Cables
+│   └── 2.5 Signal Connectors
+│
+└── 3. Thruster Subsystem
+    ├── 3.1 Motor
+    ├── 3.2 Propeller
+    ├── 3.3 Shaft
+    ├── 3.4 Seals
+    ├── 3.5 Watertight Housing / Chamber
+    └── 3.6 Thruster Interface Connector
+
+
+Power Supply Subsystem
+
+Power Supply Failure
+- Battery Failure
+  - Cell capacity degradation (OR) [2]
+  - Decrease in Li-Ion concentration (OR)
+  - Short circuit (OR)
+    - Material flaw
+    - Aging
+    - Vibration
+    - Dendrites
+  - BMS comms fault (OR)
+  - Connector corrosion
+  - Thermal runaway (OR)
+    - Overcharging
+    - Aging
+
+- Power Supply Module Failure (OR)
+  - Voltage regulation failure (OR)
+    - Component wear
+    - Thermal stress
+  - Overvoltage/undervoltage output (OR)
+    - Regulator failure
+    - Load transient
+
+- Power Distribution/Conversion Failure
+  - DC-DC converter fault (OR)
+    - Transformer saturation
+    - Switching FET
+  - Load rejection device (OR) [3]
+  - Overload/overcurrent condition (AND)
+    - Short circuit
+    - Protection device fails
+
+- Cable/Connector Failure
+  - Cable insulation corrosion (OR)
+    - Seawater corrosion
+    - Abrasion
+  - Connector corrosion (OR)
+    - Mate/demate
+    - Inadequate sealing
+  - Mechanical cable break (OR)
+    - Vibration fatigue
+    - Impact
+
+
+Thruster Subsystem Failure
+- Motor Failure
+  - Winding short circuit failure (OR)
+    - Insulation breakdown
+    - Overload
+    - Water ingress
+  - Bearing seizure/mechanical wear (OR)
+    - Lubrication loss
+    - Overload
+    - Sand/silt ingress
+  - Overheating (OR)
+    - Prolonged high-current demand
+    - Poor thermal path
+  - Water ingress (OR) [2]
+    - Seal failure
+    - Housing breach
+    - Pressure exceedance
+
+- Prop Failure
+  - Blade deformation/fracture (OR) [2]
+    - Obstacle impact
+    - Cavitation
+    - Fatigue
+  - Foreign object entanglement (OR) [1]
+    - Marine debris
+    - Kelp
+    - Fishing gear
+    - Monofilament line
+  - Loosening/detachment from shaft (OR)
+    - Fastener fatigue
+    - Vibration
+    - Inadequate torquing
+
+- Shaft/Seal Failure
+  - Shaft misalignment (OR)
+    - Impact
+    - Assembly error
+  - Shaft bearing failure (OR)
+    - Lubrication loss
+    - Contamination
+    - Overload
+  - Seal Failure (AND)
+    - Pressure differential exceedance
+    - Seal degradation
+    - Mechanical failure from impact
+
+- Housing/Interface Failure
+  - Housing breach
+    - Obstacle impact
+    - Manufacturing defect
+    - Fatigue crack
+    - Pressure cycling
+  - O-ring/gasket issues
+    - Improper assembly
+    - O-ring aging
+    - Surface defect
+  - Thruster Interface Connector
+    - Connector pin failure
+    - Mechanical damage
+    - Excessive mating cycles
+    - Corrosion
+
+
+References
+[1] Huang et al. (2025)
+[2] Chen et al. (2025)
+[3] Xu et al. (2013)
+
+
