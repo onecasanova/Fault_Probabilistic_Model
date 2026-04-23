@@ -11,7 +11,7 @@ from BN_fault_model import GATES, ROOT_PRIORS
 # 1 = failed / fault present
 
 ROOT_PERSISTENCE = 0.95
-GATE_PERSISTENCE = 0.90
+GATE_PERSISTENCE = 0.900
 
 
 def node(variable, time_slice):
