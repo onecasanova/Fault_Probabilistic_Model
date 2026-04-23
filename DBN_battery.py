@@ -18,7 +18,7 @@ def sample_binary(p_true):
 
 
 IMG_DIR = "img"
-NUM_RUNS = 5000
+NUM_RUNS = 10000
 NUM_STEPS = 50
 SEED = int(time.time()) % 10000
 
@@ -50,8 +50,8 @@ cpd_short_0 = TabularCPD(
 
 cpd_thermal_0 = TabularCPD(
     ("ThermalRunaway", 0), 2,
-    [[0.97, 0.70], #no TR
-     [0.03, 0.30]], #TR
+    [[0.98, 0.75], #no TR
+     [0.02, 0.25]], #TR
     evidence=[("Aging", 0)],
     evidence_card=[2]
 )
@@ -274,7 +274,7 @@ def plot_sensitivity(parameter, values, num_runs=NUM_RUNS, num_steps=NUM_STEPS, 
 if __name__ == "__main__":
     print(f"Using random seed: {SEED}")
     failure_prob = monte_carlo()
-    print(failure_prob)
+    # print(failure_prob)
     plot_failure_curve(failure_prob)
 
     plot_sensitivity(
@@ -285,5 +285,11 @@ if __name__ == "__main__":
     plot_sensitivity(
         "aging_onset",
         values=[0.005, 0.01, 0.02, 0.05],
+        num_runs=1000,
+    )
+
+    plot_sensitivity(
+        "short_given_aging",
+        values=[0.001, 0.02, 0.08, 0.15],
         num_runs=1000,
     )
